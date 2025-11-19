@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<link rel="stylesheet" href="./style/style1.css" />
+		<script src="./src/main.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<h1>Logino</h1>
+		</header>
+
+		<main>
+			<form id="login">
+				<div id="type-input">
+					<div>
+						<label for="username">Username </label><span id="usr-info">*</span>
+						<br />
+						<input
+							type="text"
+							id="username"
+							name="username"
+							minlength="4"
+							maxlength="8"
+							size="16"
+							required
+							placeholder="Enter your username" />
+					</div>
+
+					<div>
+						<label for="password">Password </label><span id="pwd-info">*</span>
+						<br />
+						<input
+							type="password"
+							id="password"
+							name="password"
+							minlength="6"
+							maxlength="10"
+							size="16"
+							required
+							placeholder="Enter your password" />
+					</div>
+				</div>
+
+				<div id="bottom-features">
+					<label id="recovery"
+						><a onclick="forget_password()">Forgot Password?</a>
+					</label>
+					<div id="toggle-pwd">
+						<input type="checkbox" onclick="showPwd()" id="show-pwd-box"/><span
+							>Show Password</span
+						>
+					</div>
+				</div>
+
+				<div id="login-btn-div">
+					<input
+						type="button"
+						value="Login"
+						onclick="login()"
+						id="login-button" />
+				</div>
+			</form>
+
+			<div id="other-method">
+				<p>Or continue with</p>
+				<img src="./assets/google.png" />
+				<img src="./assets/facebook.png" />
+				<img src="./assets/discord.png" />
+			</div>
+		</main>
+
+		<div id="login-status" class="status">
+			<div id="login-status-block">
+				<span id="login-status-info">Login Test</span>
+			</div>
+		</div>
+
+		<footer>
+			<p>This is a login page.</p>
+		</footer>
+	</body>
+</html>

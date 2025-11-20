@@ -1,27 +1,21 @@
 const origin_usr = "root";
 const origin_pwd = "admin1234";
-
-let next = false;
+let username = document.getElementById("username");
+let password = document.getElementById("password");
 
 document.getElementById("show-pwd-box").checked = false;
-document.getElementById("username").value = "root";
-document.getElementById("password").value = "admin1234";
+username.value = "root";
+password.value = "admin1234";
+
+let next = false;
 
 function login() {
 	let info = document.getElementById("login-status-info");
 	let block = document.getElementById("login-status");
 	let info_block = document.getElementById("login-status-block");
 
-
-	let usr = document.getElementById("username");
-	let pwd = document.getElementById("password");
-
-	let usr_input = usr.value;
-	let pwd_input = pwd.value;
-
-	console.log(usr_input);
-	console.log(pwd_input);
-    console.log(next);
+	let usr_input = username.value;
+	let pwd_input = password.value;
 
 	if (next) {
 		block.classList.remove("status");
@@ -48,7 +42,6 @@ function login() {
 	}
 
 	if (isEmpty) {
-        console.log("est");
 		return;
 	}
 
@@ -83,11 +76,10 @@ function login() {
 function forget_password() {}
 
 function showPwd() {
-	let pwd_input = document.getElementById("password");
-	if (pwd_input.type == "password") {
-		pwd_input.type = "text";
+	if (password.type == "password") {
+		password.type = "text";
 		return;
 	}
 
-	pwd_input.type = "password";
+	password.type = "password";
 }

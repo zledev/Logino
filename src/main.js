@@ -19,9 +19,7 @@ function login() {
 
 	if (next) {
 		block.classList.remove("status");
-
 		void info_block.offsetHeight;
-
 		block.classList.add("status");
 	}
 

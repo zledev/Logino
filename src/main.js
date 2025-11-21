@@ -28,17 +28,17 @@ function login() {
 	let isEmpty = false;
 
 	if (usr_input.length <= 0) {
-		usr.style.borderColor = "#fc5353";
+		username.style.borderColor = "#fc5353";
 		isEmpty = true;
 	} else {
-		usr.style.borderColor = "#acaaaa";
+		username.style.borderColor = "#acaaaa";
 	}
 
 	if (pwd_input <= 0) {
-		pwd.style.borderColor = "#fc5353";
+		password.style.borderColor = "#fc5353";
 		isEmpty = true;
 	} else {
-		pwd.style.borderColor = "#acaaaa";
+		password.style.borderColor = "#acaaaa";
 	}
 
 	if (isEmpty) {
@@ -46,8 +46,8 @@ function login() {
 	}
 
 	if (usr_input == origin_usr && pwd_input == origin_pwd) {
-		usr.style.borderColor = "#48dc7cff";
-		pwd.style.borderColor = "#48dc7cff";
+		username.style.borderColor = "#48dc7cff";
+		password.style.borderColor = "#48dc7cff";
 		info_block.style.borderColor = "#53fc8eff";
 		info.style.color = "#000000ff";
 		info_block.style.backgroundColor = "#d2f5d5ff";
@@ -59,8 +59,8 @@ function login() {
 		return;
 	}
 
-	usr.style.borderColor = "#fc5353";
-	pwd.style.borderColor = "#fc5353";
+	username.style.borderColor = "#fc5353";
+	password.style.borderColor = "#fc5353";
 
 	info_block.style.borderColor = "#c31e1e";
 	info.style.color = "#ff1e1e";
